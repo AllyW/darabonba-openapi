@@ -67,6 +67,7 @@ func (mock *mockHandler) handleSSE(w http.ResponseWriter, req *http.Request) {
 func (mock *mockHandler) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	if req.URL.Path == "/sse" {
 		mock.handleSSE(w, req)
+
 		return
 	}
 
